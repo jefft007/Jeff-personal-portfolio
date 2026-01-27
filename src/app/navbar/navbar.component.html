@@ -1,0 +1,61 @@
+<header class="fixed w-full bg-slate-950/80 backdrop-blur-md border-b border-white/10 z-50 transition-all duration-300">
+  <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <!-- Logo / Name -->
+    <a href="#home"
+      class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent hover:opacity-80 transition-opacity">
+      Portfolio.
+    </a>
+
+    <!-- Navigation Links -->
+    <ul class="hidden md:flex gap-8 font-medium text-gray-300">
+      <li>
+        <a href="#home" class="hover:text-primary transition-colors duration-300">Home</a>
+      </li>
+      <li>
+        <a href="#about" class="hover:text-primary transition-colors duration-300">About</a>
+      </li>
+      <li>
+        <a href="#skills" class="hover:text-primary transition-colors duration-300">Skills</a>
+      </li>
+      <li>
+        <a href="#experience" class="hover:text-primary transition-colors duration-300">Experience</a>
+      </li>
+      <li>
+        <a href="#projects" class="hover:text-primary transition-colors duration-300">Projects</a>
+      </li>
+      <li>
+        <a href="#certifications" class="hover:text-primary transition-colors duration-300">Certifications</a>
+      </li>
+      <li>
+        <a href="#contact" class="hover:text-primary transition-colors duration-300">Contact</a>
+      </li>
+    </ul>
+
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden">
+      <button (click)="toggleMenu()" class="text-gray-300 hover:text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path *ngIf="!menuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+          <path *ngIf="menuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div *ngIf="menuOpen" class="md:hidden bg-slate-950 border-b border-white/10">
+    <ul class="flex flex-col gap-4 px-6 py-6 text-gray-300">
+      <li><a href="#home" class="block hover:text-primary transition" (click)="closeMenu()">Home</a></li>
+      <li><a href="#about" class="block hover:text-primary transition" (click)="closeMenu()">About</a></li>
+      <li><a href="#skills" class="block hover:text-primary transition" (click)="closeMenu()">Skills</a></li>
+      <li><a href="#experience" class="block hover:text-primary transition" (click)="closeMenu()">Experience</a></li>
+      <li><a href="#projects" class="block hover:text-primary transition" (click)="closeMenu()">Projects</a></li>
+      <li><a href="#certifications" class="block hover:text-primary transition" (click)="closeMenu()">Certifications</a>
+      </li>
+      <li><a href="#contact" class="block hover:text-primary transition" (click)="closeMenu()">Contact</a></li>
+    </ul>
+  </div>
